@@ -2,10 +2,6 @@
 import { didUserWin } from './utils.js';
 // initialize state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
 
   // GET DOM ELEMENTS
 const rspBtn = document.getElementById('rsp-btn');
@@ -13,8 +9,7 @@ const winsSpan = document.getElementById('total-wins');
 const losesSpan = document.getElementById('total-loses');
 const drawsSpan = document.getElementById('total-draws');
 
-// let randomChoice = Math.ceil(Math.random()*3)
-// console.log(randomChoice);
+
 
   // INITIALIZE STATE
 let wins = 0;
@@ -35,11 +30,6 @@ function funRandomNum(randomNum){
         return 'scissors';
     }
 }
-
-
-
-
-
 
   // RSP BUTTON EVENT LISTENER
 rspBtn.addEventListener('click', ()=> {

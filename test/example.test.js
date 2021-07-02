@@ -6,7 +6,7 @@ const test = QUnit.test;
 test('test a function DIDUSERWIN', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expectedWin = 1;
+  
     
     //Act 
     // Call the function you're testing and set the result to a const
