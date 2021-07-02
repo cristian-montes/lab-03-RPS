@@ -48,8 +48,6 @@ rspBtn.addEventListener('click', ()=> {
     const compuChoise = funRandomNum();
 
     const isWinner = didUserWin(userChoice, compuChoise);
-    console.log(isWinner);
-
     if (isWinner === 'WIN'){
         wins++;
     } if (isWinner === 'DRAW') {
