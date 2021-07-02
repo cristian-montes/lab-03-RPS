@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-
+import { didUserWin } from './utils.js';
 // initialize state
 
 // set event listeners 
@@ -10,8 +10,8 @@
   // GET DOM ELEMENTS
 const rspBtn = document.getElementById('rsp-btn');
 const winsSpan = document.getElementById('total-wins');
-const losesSpan = document.getElementById('loses-wins');
-const drawsSpan = document.getElementById('draws-wins');
+const losesSpan = document.getElementById('total-loses');
+const drawsSpan = document.getElementById('total-draws');
 
 // let randomChoice = Math.ceil(Math.random()*3)
 // console.log(randomChoice);
@@ -43,6 +43,25 @@ function funRandomNum(randomNum){
 
   // RSP BUTTON EVENT LISTENER
 rspBtn.addEventListener('click', ()=> {
+    const selected = document.querySelector('input[type=radio]:checked'); 
+    const userChoice = selected.value;
+    const compuChoise = funRandomNum();
+
+    const isWinner = didUserWin(userChoice, compuChoise);
+    console.log(isWinner);
+
+    if (isWinner === 'WIN'){
+        wins++;
+    } if (isWinner === 'DRAW') {
+        draws++;
+    } if (isWinner === 'LOSS'){
+        loses++;
+    }
+
+    winsSpan.textContent = wins;
+    losesSpan.textContent = loses;
+    drawsSpan.textContent = draws;
+
 
 });
 
